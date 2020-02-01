@@ -39,9 +39,9 @@
   ],
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/alvarotrigo/fullPage.js/issues"
+    "url": "https://github.com/rockmanvnx6/fullPage.js/issues"
   },
-  "homepage": "https://github.com/alvarotrigo/fullPage.js",
+  "homepage": "https://github.com/rockmanvnx6/fullPage.js",
   "namespace": "fullpage_api",
   "devDependencies": {
     "gulp": "^4.0.0",

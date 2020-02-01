@@ -278,6 +278,7 @@
         * It changes the scroll bar visibility and the history of the site as a result.
         */
         function setAutoScrolling(value, type){
+            console.log('from rockmanvnx6 fork');
             //removing the transformation
             if(!value){
                 silentScroll(0);
