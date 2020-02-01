@@ -1260,7 +1260,6 @@
                     };
 
 
-                    console.log('callback params', callbacksParams);
 
                     if(activeSlide){
                         slideAnchorLink = activeSlide.getAttribute('data-anchor');
@@ -1272,6 +1271,7 @@
                         removeClass(siblings(currentSection), ACTIVE);
 
                         if(isFunction( options.onLeave )){
+                            console.log('firing', callbacksParams);
                             fireCallback('onLeave', callbacksParams);
                         
                         }
