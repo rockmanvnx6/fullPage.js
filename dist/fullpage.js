@@ -1308,6 +1308,7 @@
                 }
 
                 if(options.fitToSection){
+                    console.log("<<<<<<< IT RUNS THIS?")
                     //for the auto adjust of the viewport to fit a whole section
                     clearTimeout(scrollId2);
 
@@ -3415,7 +3416,7 @@
             });
 
             //scrolling the page to the top with no animation
-            window.scrollTo(0, 0);
+            // window.scrollTo(0, 0);
 
             //removing selectors
             var usedSelectors = [SECTION, SLIDE, SLIDES_CONTAINER];
