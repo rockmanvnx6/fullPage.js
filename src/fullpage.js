@@ -1266,6 +1266,8 @@
                         slideIndex = index(activeSlide);
                     }
 
+                    console.log("----------- can scroll", canScroll);
+
                     if(canScroll){
                         addClass(currentSection, ACTIVE);
                         removeClass(siblings(currentSection), ACTIVE);
