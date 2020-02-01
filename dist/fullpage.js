@@ -1191,14 +1191,11 @@
 
             if(!options.autoScrolling || options.scrollBar){
                 var currentScroll = getScrollTop();
-                console.log('debug 1194: currentScroll', currentScroll);
 
                 var scrollDirection = getScrollDirection(currentScroll);
-                console.log('debug 1197: scroll direction', scrollDirection);
 
                 var visibleSectionIndex = 0;
                 var screen_mid = currentScroll + (getWindowHeight() / 2.0);
-                console.log('debug 1202:  getWindowHeight',  getWindowHeight());
 
                 var isAtBottom = $body.offsetHeight - getWindowHeight() === currentScroll;
 
@@ -1228,7 +1225,6 @@
                 }
 
                 if(isCompletelyInViewPort(scrollDirection)){
-                    console.log('if run 1230');
                     if(!hasClass($(SECTION_ACTIVE_SEL)[0], COMPLETELY)){
                         addClass($(SECTION_ACTIVE_SEL)[0], COMPLETELY);
                         removeClass(siblings($(SECTION_ACTIVE_SEL)[0]), COMPLETELY);
@@ -1244,10 +1240,16 @@
                     isScrolling = true;
                     var leavingSection = $(SECTION_ACTIVE_SEL)[0];
                     var leavingSectionIndex = index(leavingSection, SECTION_SEL) + 1;
+                    console.log('leavingSection', leavingSection, 'leavingSection index', leavingSectionIndex);
+
                     var yMovement = getYmovement(currentSection);
+                    console.log('getYMovement', getYmovement);
+
                     var anchorLink  = currentSection.getAttribute('data-anchor');
                     var sectionIndex = index(currentSection, SECTION_SEL) + 1;
                     var activeSlide = $(SLIDE_ACTIVE_SEL, currentSection)[0];
+                    console.log('activeSlide', activeSlide);
+
                     var slideIndex;
                     var slideAnchorLink;
                     var callbacksParams = {
@@ -1258,6 +1260,9 @@
                         leavingSection: leavingSectionIndex,
                         direction: yMovement
                     };
+
+
+                    console.log('callback params', callbacksParams);
 
                     if(activeSlide){
                         slideAnchorLink = activeSlide.getAttribute('data-anchor');
@@ -1270,6 +1275,7 @@
 
                         if(isFunction( options.onLeave )){
                             fireCallback('onLeave', callbacksParams);
+                        
                         }
                         if(isFunction( options.afterLoad )){
                             fireCallback('afterLoad', callbacksParams);
@@ -3989,7 +3995,6 @@
     //http://stackoverflow.com/questions/3464876/javascript-get-window-x-y-position-for-scroll
     function getScrollTop(){
         var doc = document.documentElement;
-        console.log('clientTop', doc.clientTop);
         return (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
     }
 
