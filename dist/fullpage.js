@@ -323,6 +323,7 @@
 
                 //scrolling the page to the section with no animation
                 if (element != null) {
+                    console.log('goes to element != null');
                     var scrollSettings = getScrollSettings(element.offsetTop);
                     scrollSettings.element.scrollTo(0, scrollSettings.options);
                 }
