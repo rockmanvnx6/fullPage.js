@@ -1224,6 +1224,7 @@
                 }
 
                 if(isCompletelyInViewPort(scrollDirection)){
+                    console.log('------------------', $(SECTION_ACTIVE_SEL)[0]);
                     if(!hasClass($(SECTION_ACTIVE_SEL)[0], COMPLETELY)){
                         addClass($(SECTION_ACTIVE_SEL)[0], COMPLETELY);
                         removeClass(siblings($(SECTION_ACTIVE_SEL)[0]), COMPLETELY);
