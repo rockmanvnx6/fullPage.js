@@ -1293,7 +1293,7 @@
                         console.log("slideAnchorLink", slideAnchorLink);
                         console.log("anchorLink", anchorLink);
                         console.log("sectionIndex", sectionIndex);
-                        
+
                         setState(slideIndex, slideAnchorLink, anchorLink, sectionIndex);
                     }
 
@@ -2509,11 +2509,13 @@
             if(canScroll){
                 // moving up
                 if (e.pageY < oldPageY && isScrollAllowed.m.up){
+                    console.log('-----------2512 moving up');
                     moveSectionUp();
                 }
 
                 // moving down
                 else if(e.pageY > oldPageY && isScrollAllowed.m.down){
+                    console.log('-----------2518 moving down');
                     moveSectionDown();
                 }
             }
