@@ -1195,11 +1195,15 @@
 
                 var scrollDirection = getScrollDirection(currentScroll);
                 console.log('debug 1197: scroll direction', scrollDirection);
-                
+
                 var visibleSectionIndex = 0;
                 var screen_mid = currentScroll + (getWindowHeight() / 2.0);
+                console.log('debug 1202:  getWindowHeight',  getWindowHeight());
+
                 var isAtBottom = $body.offsetHeight - getWindowHeight() === currentScroll;
+
                 var sections =  $(SECTION_SEL);
+                console.log('debug 1206: sections:', sections);
 
                 //when using `auto-height` for a small last section it won't be centered in the viewport
                 if(isAtBottom){
@@ -1224,6 +1228,7 @@
                 }
 
                 if(isCompletelyInViewPort(scrollDirection)){
+                    console.log('if run 1230');
                     if(!hasClass($(SECTION_ACTIVE_SEL)[0], COMPLETELY)){
                         addClass($(SECTION_ACTIVE_SEL)[0], COMPLETELY);
                         removeClass(siblings($(SECTION_ACTIVE_SEL)[0]), COMPLETELY);
