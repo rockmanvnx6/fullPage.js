@@ -325,6 +325,7 @@
                 if (element != null) {
                     console.log('goes to element != null');
                     var scrollSettings = getScrollSettings(element.offsetTop);
+                    console.log("scrollSettings: ", scrollSettings);
                     // scrollSettings.element.scrollTo(0, scrollSettings.options);
                 }
             }
