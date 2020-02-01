@@ -1587,10 +1587,12 @@
                     if(isAccelerating && isScrollingVertically){
                         //scrolling down?
                         if (delta < 0) {
+                            console.log('-------down----------')
                             scrolling('down');
 
                         //scrolling up?
                         }else {
+                            console.log('-------up----------')
                             scrolling('up');
                         }
                     }
