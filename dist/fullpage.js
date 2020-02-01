@@ -1200,7 +1200,6 @@
                 var isAtBottom = $body.offsetHeight - getWindowHeight() === currentScroll;
 
                 var sections =  $(SECTION_SEL);
-                console.log('debug 1206: sections:', sections);
 
                 //when using `auto-height` for a small last section it won't be centered in the viewport
                 if(isAtBottom){
@@ -1243,12 +1242,11 @@
                     console.log('leavingSection', leavingSection, 'leavingSection index', leavingSectionIndex);
 
                     var yMovement = getYmovement(currentSection);
-                    console.log('getYMovement', getYmovement);
+                    console.log('getYMovement', yMovement);
 
                     var anchorLink  = currentSection.getAttribute('data-anchor');
                     var sectionIndex = index(currentSection, SECTION_SEL) + 1;
                     var activeSlide = $(SLIDE_ACTIVE_SEL, currentSection)[0];
-                    console.log('activeSlide', activeSlide);
 
                     var slideIndex;
                     var slideAnchorLink;
@@ -1291,6 +1289,11 @@
                             //needed to enter in hashChange event when using the menu with anchor links
                             lastScrolledDestiny = anchorLink;
                         }
+                        console.log("slideIndex", slideIndex);
+                        console.log("slideAnchorLink", slideAnchorLink);
+                        console.log("anchorLink", anchorLink);
+                        console.log("sectionIndex", sectionIndex);
+                        
                         setState(slideIndex, slideAnchorLink, anchorLink, sectionIndex);
                     }
 
