@@ -1191,7 +1191,11 @@
 
             if(!options.autoScrolling || options.scrollBar){
                 var currentScroll = getScrollTop();
+                console.log('debug 1194: currentScroll', currentScroll);
+
                 var scrollDirection = getScrollDirection(currentScroll);
+                console.log('debug 1197: scroll direction', scrollDirection);
+                
                 var visibleSectionIndex = 0;
                 var screen_mid = currentScroll + (getWindowHeight() / 2.0);
                 var isAtBottom = $body.offsetHeight - getWindowHeight() === currentScroll;
@@ -3980,6 +3984,7 @@
     //http://stackoverflow.com/questions/3464876/javascript-get-window-x-y-position-for-scroll
     function getScrollTop(){
         var doc = document.documentElement;
+        console.log('clientTop', doc.clientTop);
         return (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
     }
 
