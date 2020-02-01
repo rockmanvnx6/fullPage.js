@@ -3416,7 +3416,7 @@
             });
 
             //scrolling the page to the top with no animation
-            // window.scrollTo(0, 0);
+            window.scrollTo(0, 0);
 
             //removing selectors
             var usedSelectors = [SECTION, SLIDE, SLIDES_CONTAINER];
@@ -3538,6 +3538,7 @@
         * http://stackoverflow.com/a/16136789/1081396
         */
         function scrollTo(element, to, duration, callback) {
+            console.log('scrollto is called !!!~~~~~~~~~~~~~~~~~~~~~~')
             var start = getScrolledPosition(element);
             var change = to - start;
             var currentTime = 0;
